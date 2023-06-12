@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db, signInWithGoogle } from './config/firebase';
@@ -30,9 +31,6 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <div>
-        <button onClick={loginWithGoogle}>Login met Google</button>
-      </div> */}
       {Posts.map((Posts) => (
         <div>
           <h1>{Posts.Title}</h1>

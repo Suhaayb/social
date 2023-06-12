@@ -8,12 +8,12 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyCksfrt_apwH4NK1KsZ_CuQX6wm1sE-_Oo',
-  authDomain: 'social-ec23f.firebaseapp.com',
-  projectId: 'social-ec23f',
-  storageBucket: 'social-ec23f.appspot.com',
-  messagingSenderId: '147144369588',
-  appId: '1:147144369588:web:3fd33bc7ff3e4d4e57fee1',
+  apiKey: "AIzaSyCksfrt_apwH4NK1KsZ_CuQX6wm1sE-_Oo",
+  authDomain: "social-ec23f.firebaseapp.com",
+  projectId: "social-ec23f",
+  storageBucket: "social-ec23f.appspot.com",
+  messagingSenderId: "147144369588",
+  appId: "1:147144369588:web:3fd33bc7ff3e4d4e57fee1"
 };
 
 // Initialize Firebase
