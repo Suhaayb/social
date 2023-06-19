@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db, signInWithGoogle } from './config/firebase';
 import Login from './Login';
+import Register from './Register';
 
 // import { auth, googleProvider } from './config/firebase';
 // import { signInWithPopup } from 'firebase/auth';
@@ -32,8 +33,8 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
-      {Posts.map((Posts) => (
+    <>
+      {/* {Posts.map((Posts) => (
         <div>
           <h1>{Posts.Title}</h1>
           <p>{Posts.Description}</p>
@@ -43,11 +44,12 @@ function App() {
         Sign in with Google
       </button>
       <h1>{localStorage.getItem('name')}</h1>
-      <h1>{localStorage.getItem('email')}</h1>
+      <h1>{localStorage.getItem('email')}</h1> */}
       <Routes>
         <Route path='login' element={<Login />} />
+        <Route path='register' element={<Register />} />
       </Routes>
-    </div>
+    </>
   );
 }
 

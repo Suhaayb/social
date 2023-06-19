@@ -10,7 +10,8 @@ function Login() {
 
   return (
     <div className='App'>
-      
+      <div className='Login-left'></div>
+      <div className='Login-right'></div>
     </div>
   );
 }
