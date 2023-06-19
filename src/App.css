@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-  min-height: 100vh;
-  min-width: 100vw;
 }
 
 .App-logo {
@@ -28,14 +26,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-.Login-left {
-  background-image: url(https://shoemarketplace.my.canva.site/images/d5b293fdfd3afa7271f99b55eab591e7.jpg);
-  height: auto;
-  width: 50vw;
-  background-position: center;
-  object-fit: cover;
 }
 
 @keyframes App-logo-spin {
