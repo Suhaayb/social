@@ -1,8 +1,10 @@
 import './App.css';
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db, signInWithGoogle } from './config/firebase';
+import Login from './Login';
 
 // import { auth, googleProvider } from './config/firebase';
 // import { signInWithPopup } from 'firebase/auth';
@@ -42,6 +44,9 @@ function App() {
       </button>
       <h1>{localStorage.getItem('name')}</h1>
       <h1>{localStorage.getItem('email')}</h1>
+      <Routes>
+        <Route path='login' element={<Login />} />
+      </Routes>
     </div>
   );
 }
