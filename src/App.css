@@ -34,6 +34,8 @@ ul {
   background-color: #b4b7bb;
   margin: 0;
   padding: 1rem 2rem;
+  align-items: center;
+  height: 45px;
 }
 
 li {
@@ -42,6 +44,15 @@ li {
 
 ul li a {
   color: #797a7c;
+  text-decoration: none;
+}
+
+ul li:last-child a {
+  color: #b4b7bb;
+  background-color: #efefef;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
