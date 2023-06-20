@@ -1,15 +1,22 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import { signOut } from 'firebase/auth';
 import { collection, getDocs, query } from 'firebase/firestore';
-import { db, signInWithGoogle } from './config/firebase';
+import { db, signInWithGoogle, auth } from './config/firebase';
 
-// import { auth, googleProvider } from './config/firebase';
-// import { signInWithPopup } from 'firebase/auth';
+import AuthDetails from './components/AuthDetails';
+
+import SignUp from './components/auth/SignUp';
 
 function App() {
   const [Posts, setPosts] = useState([]);
-  // const [userCedentials, setCredientials] = useState([]);
-
+  const userSignOut = () => {
+    signOut(auth)
+      .then(() => {
+        console.log('sign out successful');
+      })
+      .catch((error) => console.log(error));
+  };
   const haalDocumentenOp = () => {
     const q = query(collection(db, 'Posts'));
     getDocs(q).then((firebaseResponse) => {
@@ -18,32 +25,28 @@ function App() {
     });
   };
 
-  // const loginWithGoogle = async () => {
-  //   const userCedentials = await signInWithPopup(auth, googleProvider);
-  //   setCredientials(userCedentials);
-  //   console.log(userCedentials);
-  // };
-
   useEffect(() => {
     haalDocumentenOp();
   }, []);
 
   return (
     <div className='App'>
-      {/* <div>
-        <button onClick={loginWithGoogle}>Login met Google</button>
-      </div> */}
+      <AuthDetails />
+      <SignUp></SignUp>
+      <div className='paragraph-text'>
+        <button class='button-25' onClick={signInWithGoogle}>
+          Google Login
+        </button>
+        <button onClick={userSignOut}>Sign Out</button>
+        {/* <h6>{localStorage.getItem('name')}</h6>
+        <h6>{localStorage.getItem('email')}</h6> */}
+      </div>
       {Posts.map((Posts) => (
         <div>
           <h1>{Posts.Title}</h1>
           <p>{Posts.Description}</p>
         </div>
       ))}
-      <button class='login-with-google-btn' onClick={signInWithGoogle}>
-        Sign in with Google
-      </button>
-      <h1>{localStorage.getItem('name')}</h1>
-      <h1>{localStorage.getItem('email')}</h1>
     </div>
   );
 }
