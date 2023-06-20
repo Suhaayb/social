@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/glacial-indifference-2");
+
 .App {
   text-align: center;
 }
@@ -35,7 +37,7 @@ ul {
   margin: 0;
   padding: 1rem 2rem;
   align-items: center;
-  height: 45px;
+  height: 55px;
 }
 
 li {
@@ -45,14 +47,17 @@ li {
 ul li a {
   color: #797a7c;
   text-decoration: none;
+  font-family: "Glacial Indifference", sans-serif;
+  font-size: 20px;
 }
 
 ul li:last-child a {
   color: #b4b7bb;
   background-color: #efefef;
-  border-radius: 20px;
+  border-radius: 60px;
   padding: 10px 15px;
   text-decoration: none;
+  font-size: 30px;
 }
 
 @keyframes App-logo-spin {
