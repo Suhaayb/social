@@ -24,6 +24,7 @@ const Login = () => {
     <div className='sign-in-container'>
       <form onSubmit={signIn}>
         <h1>Log In to your Account</h1>
+        <div className='form'>
         <input
           type='email'
           placeholder='Enter your email'
@@ -37,10 +38,12 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <button type='submit'>Log In</button>
+        </div>
       </form>
       <button class='login-with-google-btn' onClick={signInWithGoogle}>
         Sign in with Google
       </button>
+      
       <h1>{localStorage.getItem('name')}</h1>
       <h1>{localStorage.getItem('email')}</h1> 
     </div>

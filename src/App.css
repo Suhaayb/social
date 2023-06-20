@@ -1,5 +1,9 @@
 @import url("https://fonts.cdnfonts.com/css/glacial-indifference-2");
 
+* {
+  font-family: "Glacial Indifference", sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -90,4 +94,15 @@ ul li:last-child a {
   to {
     transform: rotate(360deg);
   }
+}
+
+.hide {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
