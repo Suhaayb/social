@@ -1,11 +1,8 @@
-import './App.css';
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { collection, getDocs, query } from 'firebase/firestore';
-import { db, signInWithGoogle, auth } from './config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import React, { useState } from 'react';
+import { auth } from '../../config/firebase';
 
-const Login = () => {
+const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -42,4 +39,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;
