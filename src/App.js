@@ -36,26 +36,12 @@ function App() {
   return (
     <div className='App'>
       <AuthDetails />
-      <SignUp></SignUp>
-      <div className='paragraph-text'>
-        <button class='button-25' onClick={signInWithGoogle}>
-          Google Login
-        </button>
-        <button onClick={userSignOut}>Sign Out</button>
-        {/* <h6>{localStorage.getItem('name')}</h6>
-        <h6>{localStorage.getItem('email')}</h6> */}
-      </div>
       {Posts.map((Posts) => (
         <div>
           <h1>{Posts.Title}</h1>
           <p>{Posts.Description}</p>
         </div>
       ))}
-      <button class='login-with-google-btn' onClick={signInWithGoogle}>
-        Sign in with Google
-      </button>
-      <h1>{localStorage.getItem('name')}</h1>
-      <h1>{localStorage.getItem('email')}</h1> 
       <ul>
         <li>
           <a href='/'>Home</a>
