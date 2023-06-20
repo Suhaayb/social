@@ -106,3 +106,7 @@ ul li:last-child a {
   flex-wrap: nowrap;
   align-items: center;
 }
+
+.form *:not(:last-child) {
+  margin-bottom: 10px;
+}

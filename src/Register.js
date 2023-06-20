@@ -24,6 +24,7 @@ const Register = () => {
     <div className='sign-in-container'>
       <form onSubmit={signUp}>
         <h1>Create Account</h1>
+        <div className='form'>
         <input
           type='email'
           placeholder='Enter your email'
@@ -37,6 +38,7 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
         ></input>
         <button type='submit'>Sign Up</button>
+        </div>
       </form>
     </div>
   );
