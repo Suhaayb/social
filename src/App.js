@@ -1,8 +1,12 @@
 import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { signOut } from 'firebase/auth';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db, signInWithGoogle, auth } from './config/firebase';
+import Login from './Login';
+import Register from './Register';
 
 import AuthDetails from './components/AuthDetails';
 
@@ -47,6 +51,32 @@ function App() {
           <p>{Posts.Description}</p>
         </div>
       ))}
+      <button class='login-with-google-btn' onClick={signInWithGoogle}>
+        Sign in with Google
+      </button>
+      <h1>{localStorage.getItem('name')}</h1>
+      <h1>{localStorage.getItem('email')}</h1> 
+      <ul>
+        <li>
+          <a href='/'>Home</a>
+        </li>
+
+        <li>
+          <a href='/search'>Search</a>
+        </li>
+
+        <li>
+          <a href='/login'>Login</a>
+        </li>
+
+        <li>
+          <a href='/register'>Register</a>
+        </li>
+      </ul>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+      </Routes>
     </div>
   );
 }
