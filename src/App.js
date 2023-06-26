@@ -7,6 +7,7 @@ import { collection, getDocs, query } from 'firebase/firestore';
 import { db, signInWithGoogle, auth } from './config/firebase';
 import Login from './Login';
 import Register from './Register';
+import Dashboard from './Dashboard';
 
 import AuthDetails from './components/AuthDetails';
 
@@ -46,10 +47,15 @@ function App() {
         <li>
           <a href='/'>Home</a>
         </li>
+        
+        <li>
+          <a href='/dashboard'>Dash</a>
+        </li>
 
         <li>
           <a href='/search'>Search</a>
         </li>
+        
 
         <li>
           <a href='/login'>Login</a>
@@ -60,6 +66,7 @@ function App() {
         </li>
       </ul>
       <Routes>
+      <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
       </Routes>
